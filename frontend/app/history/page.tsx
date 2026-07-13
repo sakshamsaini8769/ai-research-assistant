@@ -28,8 +28,8 @@ export default function History() {
   const fetchHistory = async () => {
     try {
       const response = await fetch(
-        "https://ai-research-assistant-4vr0.onrender.com/history"
-      );
+  `${process.env.NEXT_PUBLIC_API_URL}/history`
+);
 
       if (!response.ok) {
         throw new Error("Failed to fetch history");
@@ -54,11 +54,11 @@ export default function History() {
 
     try {
       const response = await fetch(
-        `https://ai-research-assistant-4vr0.onrender.com/history/${index}`,
-        {
-          method: "DELETE",
-        }
-      );
+  `${process.env.NEXT_PUBLIC_API_URL}/history/${index}`,
+  {
+    method: "DELETE",
+  }
+);
 
       if (!response.ok) {
         throw new Error("Delete failed");

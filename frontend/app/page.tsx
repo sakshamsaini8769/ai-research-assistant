@@ -24,16 +24,13 @@ export default function Home() {
       setLoading(true);
       setReport("");
 
-const response = await fetch(
-  "https://ai-research-assistant-4vr0.onrender.com/research",
-  {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ topic }),
-  }
-);
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/research`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ topic }),
+      });
 
       if (!response.ok) {
         throw new Error("Failed to generate report");
