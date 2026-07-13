@@ -12,7 +12,8 @@ HISTORY_FILE = Path(__file__).resolve().parents[2] / "history.json"
 
 
 def save_history(topic: str, report: str):
-    """Save generated report to history.json"""
+    print("Saving history...")
+    print("File Path:", HISTORY_FILE)
 
     if HISTORY_FILE.exists():
         with open(HISTORY_FILE, "r", encoding="utf-8") as f:
@@ -34,6 +35,8 @@ def save_history(topic: str, report: str):
 
     with open(HISTORY_FILE, "w", encoding="utf-8") as f:
         json.dump(history, f, indent=4, ensure_ascii=False)
+
+    print("History Saved Successfully")
 
 
 def generate_research(topic: str):
