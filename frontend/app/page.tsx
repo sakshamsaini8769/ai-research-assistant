@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Navbar from "@/components/navbar";
 import Hero from "@/components/Hero";
-import Stats from "@/components/Stats";
+
 import SearchBox from "@/components/SearchBox";
 import ReportActions from "@/components/ReportActions";
 import ReportCard from "@/components/ReportCard";
@@ -86,7 +86,7 @@ export default function Home() {
 
           <Hero />
 
-          <Stats />
+          
 
           <SearchBox
             topic={topic}
