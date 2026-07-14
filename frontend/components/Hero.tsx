@@ -31,7 +31,7 @@ export default function Hero() {
 
       <p className="mt-2 text-gray-400">
 
-        Powered by Tavily • Firecrawl • Groq AI
+        
 
       </p>
 
